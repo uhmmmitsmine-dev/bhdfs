@@ -1,0 +1,114 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e1e2f 0%, #0e0e16 65%);
+  color: #f2f2f5;
+}
+
+.app {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1 {
+  margin-bottom: 0.4rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.subtitle,
+.note {
+  color: #c6c6d1;
+  line-height: 1.5;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  background: #181826;
+  border: 1px solid #2f2f44;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.3rem 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+.inline-control {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.inline-control input {
+  width: auto;
+}
+
+input,
+select,
+button {
+  border-radius: 8px;
+  border: 1px solid #3c3c57;
+  padding: 0.65rem;
+  font-size: 1rem;
+}
+
+input,
+select {
+  background: #111120;
+  color: #efeff8;
+}
+
+button {
+  background: #4f7cff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3966ed;
+}
+
+.result {
+  margin-top: 1.2rem;
+  background: #181826;
+  border: 1px solid #2f2f44;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.trade-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  background: #111120;
+  border: 1px solid #343455;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.team-card h3 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.summary {
+  margin-top: 1rem;
+  color: #d4d4e2;
+}
