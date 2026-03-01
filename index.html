@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Trade Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>NBA Trade Generator</h1>
+      <p class="subtitle">
+        Generate a random trade idea using players from this NBA season, including
+        each player's team and NBA 2K overall.
+      </p>
+
+      <section class="controls">
+        <label for="playersPerTeam">Players per team in trade</label>
+        <select id="playersPerTeam">
+          <option value="1">1-for-1</option>
+          <option value="2">2-for-2</option>
+        </select>
+
+        <label for="maxDifference">Max total value difference</label>
+        <input id="maxDifference" type="number" min="1" max="30" value="10" />
+
+        <div class="inline-control">
+          <input id="includePicks" type="checkbox" checked />
+          <label for="includePicks">Include draft picks (1st/2nd round)</label>
+        </div>
+
+        <label for="maxPicksPerTeam">Max picks each team can include</label>
+        <select id="maxPicksPerTeam">
+          <option value="0">0</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+        </select>
+
+        <button id="generateBtn" type="button">Generate Trade</button>
+      </section>
+
+      <section id="result" class="result" aria-live="polite"></section>
+      <p class="note">
+        Note: 2K overalls are representative for this season and may vary by roster
+        update. Pick values are heuristic for balancing trade output.
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
